@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+:root{
+    --light: #ffffff;
+    --dark: #000000;
+    --loveclr: #F42213;
+    --toplightgrey: #efefef;
+    --semilight: #dfe1e5;
+    --grey: #afafaf;
+    --darkgrey: #333333;
+    --light-semilight: #C9F1FF;
+    --girlclr: #FF81D6;
+    --babyclr: #FFE3EB;
+    --royal: #3C48FF;
+    --queenclr:#60091d;
+    --kingclr:#11322c;
+    --princess:#180105;
+    --links: #3FCCFF;
+    --font-heading: 'Roboto', helvetica, arial, sans-serif;
+    --font-content: 'Roboto', helvetica, arial, sans-serif; 
+    --spacing: 1em;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+overflow: hidden;
+background-color: var(--light);
+position: relative;
+background-repeat: no-repeat;
+background-size: cover;
+color: var(--dark);
+max-width: 100%;
+margin: 0;
+padding: 0;
+}
+li{
+    list-style: none;
+    text-align: left;
+}
+a {color:var(--darkgrey) ;
+}
+.topbar{
+border-bottom: var(--semilight);
+text-align:left;
+background-color: var(--darkgrey);
+width: 100%;
+margin: 0;
+padding: 0;}
+.topbar a{
+    color: var(--light);
+}
+.topbar li{
+    border-bottom: 0.2em solid;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    list-style: none !important;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+}
+.ws-logo-pic{
+    width:100%;
+    text-align: center;
+    min-height:0.5;
+    padding-top: 1em;
+    }
+.ws-logo-pic img 
+{
+    width: 5em;
+    text-align: center;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.srch-icon{
+    text-align: center;
+    color: var(--darkgrey);
+padding-left: 1em;
+}
+.srch-bar{
+border-radius: 0.2em;
+color: var(--darkgrey);
+padding-left: 1em;
+margin-right: 1em;
+}
+.srch-bar input{
+border: var(--darkgrey) solid;
+border-radius: 0.3em;
+padding-top: 1em;
+padding-left: 4em;
+margin-top: 1em;
+}
+.icon-n-bar
+{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    padding:0 0 2rem 0;
+    text-align: right;
+}
+.icon-n-bar i
+{
+    margin:2em 0 0 0;
+}
+.button{
+    background-color: var(--darkgrey);
+    color: var(--light);
+    display: inline-block;  
+    border: 0em solid #555555;
+    border-radius: 0.5em;
+    text-decoration: none;
+    padding:0.2em;
+}
+.button:hover{
+background-color:var(--light);
+color: var(--darkgrey);
+}
