@@ -96,7 +96,8 @@ margin-top: 1em;
     display:grid;
     grid-template-columns: 1fr 5fr;
     padding:0 0 2rem 0;
-    text-align: right;
+    place-self: center;
+    width: 10%;
 }
 .icon-n-bar i
 {
@@ -111,6 +112,10 @@ margin-top: 1em;
     text-decoration: none;
     padding:0.2em;
 }
+/* 
+.button span{
+    color: var(--light);
+} */
 .button:hover{
 background-color:var(--light);
 color: var(--darkgrey);
