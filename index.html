@@ -28,12 +28,12 @@
       </div>
       </div>
       <ul>
-        <li><button><span class="material-icons">favorite_border</span></button></li>
-        <li><button><span class="material-icons">shopping_cart</span></button></li>
-      </ul>
-      <button type="button">
-        <span class="material-icons">menu</span>
-      </button>
+        <li class="button"><i class="fas fa-microphone-alt"></i> Search by voice</li>
+        <li class="button"><i class="fas fa-american-sign-language-interpreting"></i> English</li>
+        <li class="button"><i class="fas fa-sign-in-alt"></i></li>
+        <li class="button"><i class="fas fa-shopping-cart"></i></li>
+        <li class="button"><i class="fas fa-bars"></i></li>
+    </ul>
       <!-- Navigation menu and toggle button (example) -->
       <nav aria-label="Primary">
         <ul class="topbar">
@@ -43,10 +43,7 @@
           <li><a href="index.html"class="button">Sale</a></li>
         </ul>
       </nav>
-
-
     </header>
-
     <main>
       <header>
         <h1>Sale on [Category Name]</h1>
@@ -54,14 +51,15 @@
         <!-- Filtering product form -->
         <form>
           <h2>Filters</h2>
-          <fieldset>
+          <div>
             <label for="sort">Show</label>
             <select name="sort" id="sort">
               <option value="price-high">Price, highest to lowest</option>
               <option value="price-low">Price, lowest to highest</option>
-              <option value="newest">Newest releases</option>
+              <option value="newest">Newest Releases</option>
             </select>
-          </fieldset>
+          </div>
+        </form>
           <fieldset>
             <legend>Colour</legend>
             <ul>
