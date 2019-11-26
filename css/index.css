@@ -179,4 +179,24 @@ text-align: center!important;
     justify-self: center;
     align-self: center;
     width: 100%;
+    background-color: var(--grey);
+    padding: 0.5em;
+}
+.div-blocks{
+    width: 98%;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.ulColors{
+    margin-left: 4em;
+}
+.rating{margin-left: 4em;}
+.product{margin-left: 2em;}
+legend ol, ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+legend ul, ol{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
