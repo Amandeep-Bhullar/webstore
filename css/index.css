@@ -335,6 +335,7 @@ grid-template-columns: 33% 67%;
 .topbar{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: -1.6em;
 }
 .topbar li{
     border-bottom: 0em solid;
@@ -342,7 +343,8 @@ grid-template-columns: 33% 67%;
 }
  .top-main-bar{
      background-color: var(--light);
-     margin-top: 0.4em;
+     margin-top: 0em;
+     padding-top: 0.3em;
      display: grid;
      grid-template-columns: 08% 42% 50%;
      justify-self: end;
