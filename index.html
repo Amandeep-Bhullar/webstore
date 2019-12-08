@@ -14,28 +14,31 @@
   <body>
     <!-- Note: From this point oneward, this document should be considered 100% customizable. The elements and structure below are simply an example template to get you started. Your products and application will have different criteria that will give you the opportunity to customize all aspects of this document to your needs. Use what you need, discard or modify anything that's not directly useful in reaching your end goal. -->
 
-    <header>
+    <div class="top-main-bar">
       <!-- Site logo, replace with your own -->
       <div class="ws-logo-pic">
       <a href="index.html"><img src="img/logo-of-webstore.png" alt="HTML Logo (replace this)"></a>
       </div>
       <div class="icon-n-bar">
-      
-        <div class="srch-icon">
-            <i class="fas fa-search-location" ></i> 
-        </div>     
-        <div class="srch-bar">
-            <input type="search">
-        </div>
-      
+          <div class="srch-icon">
+              <i class="fas fa-search-location" ></i> 
+          </div>     
+          <div class="srch-bar">
+              <input type="search">
+          </div>  
+      </div>
+      <div>
+        <ul class="ulTopMenu">
+          <li class="button"><i class="fas fa-microphone-alt"></i> Search By Voice</li>
+          <li class="button"><i class="fas fa-american-sign-language-interpreting"></i> English</li>
+          <li class="button liIconMenu"><i class="fas fa-sign-in-alt"></i></li>
+          <li class="button liIconMenu"><i class="fas fa-shopping-cart"></i></li>
+          <li class="button liIconMenu hideMenu"><button class="btn btn-primary"><i class="fas fa-bars"></i> </button> </li>
+      </ul>
     </div>
-      <ul class="ulTopMenu">
-        <li class="button"><i class="fas fa-microphone-alt"></i> Search By Voice</li>
-        <li class="button"><i class="fas fa-american-sign-language-interpreting"></i> English</li>
-        <li class="button liIconMenu"><i class="fas fa-sign-in-alt"></i></li>
-        <li class="button liIconMenu"><i class="fas fa-shopping-cart"></i></li>
-        <li class="button liIconMenu"><button class="btn btn-primary"><i class="fas fa-bars"></i> </button> </li>
-    </ul>
+   </div>
+
+<header>
       <!-- Navigation menu and toggle button (example) -->
       <nav aria-label="Primary" class="main-navbar">
         <ul class="topbar">
@@ -45,7 +48,7 @@
           <li><a href="index.html"class="button">Sale</a></li>
         </ul>
       </nav>
-    </header>
+</header>
     <main>
       <header>
          <!-- Filtering product form -->
@@ -117,7 +120,8 @@
         </form> -->
       </header>
 <!-- <h2>Search Results in Quick search box</h2> -->
-      <section class="big-box-border">
+<article class="grid-find-advertise">
+      <section class="quick-find big-box-border">
           <form id="formQuickFind">
               <article class="topbar-of-quickfind">
                   <h3>
@@ -127,7 +131,7 @@
               <article class="main-navbar type">
                   <h4>Product Type</h4>
                   <label></label>
-                  <select id="dropDownProductType" name="dropDownProductType">
+                  <select class="dropdownProduct" id="dropDownProductType" name="dropDownProductType">
                     <option value="0">Select Product Type</option>
                     <option value="1">Formal</option>
                     <option value="2">Casual</option>
@@ -136,7 +140,7 @@
               <article class="category">
                 <h4>Product Category</h4>
                 <label></label>
-                <select id="dropDownProductCategory" name="dropDownProductCategory">
+                <select class="dropdownProduct" id="dropDownProductCategory" name="dropDownProductCategory">
                   <option value="0">Select Product Category</option>
                   <option value="1">Men</option>
                   <option value="2">Women</option>
@@ -148,27 +152,27 @@
               </article>
           </form>
         </section>
-
-       
-
          <!--70% off-->
          <section class="grid-addvertisement">
-         <div class="images div-blocks big-box-border">
+         <div class="images imgcover div-blocks sale-box-border">
             <img src="img/sale-70-banner.gif">
            <!-- <h2>70% Off ON These Products</h2> -->
          </div>
-        <div class="images div-blocks big-box-border">
+        <div class="images imgcover div-blocks sale-box-border">
           <img src="img/clearance-sale.png">
          <!-- <h2>clearance> -->
          </div>
         </section>
+      </article>
+
           <!--Sale-->
         <!--  <div class="images div-blocks big-box-border">
             <img src="img/c apri-women.png">
             <h2>Sale</h2>
          </div> -->
         <!-- Note: All 5 products are identical -->
-        <div id="products">
+
+        <div  class="all-products" id="products">
         </div>
           <!-- Product 1 -->
           
@@ -240,15 +244,17 @@
                   </select></a></li>
             </ul>
           </li>
+          <li>
+              <ul class="sociallinks">
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+          </li>
         </ul>
       </nav>
-      <ul class="sociallinks">
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-      </ul>
       <p class="copyright">Copyright <i class="far fa-copyright"></i> 2019 Bhullar Webstore</p>
     </footer>
 
