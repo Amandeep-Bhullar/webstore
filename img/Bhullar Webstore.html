@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhullar Webstore</title>
+    <meta name="description" content="[A short description]">
+    <meta name="author" content="[Your Name]">
+    <link rel="stylesheet" href="./Bhullar Webstore_files/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
+    <link rel="stylesheet" href="./Bhullar Webstore_files/icon"> <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
+    <link rel="stylesheet" href="./Bhullar Webstore_files/index.css">
+    <script src="./Bhullar Webstore_files/a076d05399.js"></script><link rel="stylesheet" href="./Bhullar Webstore_files/free.min.css" media="all">
+  </head>
+  <body>
+    <!-- Note: From this point oneward, this document should be considered 100% customizable. The elements and structure below are simply an example template to get you started. Your products and application will have different criteria that will give you the opportunity to customize all aspects of this document to your needs. Use what you need, discard or modify anything that's not directly useful in reaching your end goal. -->
+
+    <header>
+      <!-- Site logo, replace with your own -->
+      <div class="ws-logo-pic">
+      <a href="http://127.0.0.1:5500/index.html"><img src="./Bhullar Webstore_files/logo-of-webstore.png" alt="HTML Logo (replace this)"></a>
+      </div>
+      <div class="icon-n-bar">
+      
+        <div class="srch-icon">
+            <i class="fas fa-search-location" aria-hidden="true"></i> 
+        </div>     
+        <div class="srch-bar">
+            <input type="search">
+        </div>
+      
+    </div>
+      <ul class="ulTopMenu">
+        <li class="button"><i class="fas fa-microphone-alt" aria-hidden="true"></i> Search By Voice</li>
+        <li class="button"><i class="fas fa-american-sign-language-interpreting" aria-hidden="true"></i> English</li>
+        <li class="button liIconMenu"><i class="fas fa-sign-in-alt" aria-hidden="true"></i></li>
+        <li class="button liIconMenu"><i class="fas fa-shopping-cart" aria-hidden="true"></i></li>
+        <li class="button liIconMenu"><button class="btn btn-primary"><i class="fas fa-bars" aria-hidden="true"></i> </button> </li>
+    </ul>
+      <!-- Navigation menu and toggle button (example) -->
+      <nav aria-label="Primary" class="main-navbar">
+        <ul class="topbar">
+          <li><a href="http://127.0.0.1:5500/index.html" class="button">Men</a>
+          </li><li><a href="http://127.0.0.1:5500/index.html" class="button">Women</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html" class="button">Baby &amp; Kids</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html" class="button">Sale</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <header>
+         <!-- Filtering product form -->
+<!--         
+       
+        <h1>Sale on [Category Name]</h1>
+
+        
+        <form>
+          <h2>Filters</h2>
+          <div>
+            <label for="sort">Show</label>
+            <select name="sort" id="sort">
+              <option value="price-high">Price, highest to lowest</option>
+              <option value="price-low">Price, lowest to highest</option>
+              <option value="newest">Newest Releases</option>
+            </select>
+          </div>
+        </form>
+          <fieldset>
+            <legend>Colour</legend>
+            <ul>
+              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+              <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+              <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Sizes</legend>
+            <ol>
+              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
+              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
+              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+            </ol>
+          </fieldset>
+          <fieldset>
+            <legend>Ratings (at least)</legend>
+            <ol>
+              <li>
+                <input type="radio" name="rating" value="4" id="aboveFour">
+                <label for="aboveFour">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="3" id="aboveThree">
+                <label for="aboveThree">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="2" id="aboveTwo">
+                <label for="aboveTwo">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="1" id="aboveOne">
+                <label for="aboveOne">
+                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+            </ol>
+          </fieldset>
+        </form> -->
+      </header>
+<!-- <h2>Search Results in Quick search box</h2> -->
+      <section class="big-box-border">
+          <form id="formQuickFind">
+              <article class="topbar-of-quickfind">
+                  <h3>
+                      Quick Find Your Product
+                  </h3>
+                </article>
+              <article class="main-navbar type">
+                  <h4>Product Type</h4>
+                  <label></label>
+                  <select id="dropDownProductType" name="dropDownProductType">
+                    <option value="0">Select Product Type</option>
+                    <option value="1">Formal</option>
+                    <option value="2">Casual</option>
+                  </select>
+              </article>
+              <article class="category">
+                <h4>Product Category</h4>
+                <label></label>
+                <select id="dropDownProductCategory" name="dropDownProductCategory">
+                  <option value="0">Select Product Category</option>
+                  <option value="1">Men</option>
+                  <option value="2">Women</option>
+                  <option value="3">Baby &amp; Kids</option>
+                </select>
+              </article>
+              <article class="search">
+                <div><button type="submit" id="buttonSearch" class="button">Search</button></div>
+              </article>
+          </form>
+        </section>
+
+       
+
+         <!--70% off-->
+         <div class="images div-blocks big-box-border">
+            <img src="./Bhullar Webstore_files/sale-70-banner.gif">
+           <!-- <h2>70% Off ON These Products</h2> -->
+         </div>
+        <div class="images div-blocks big-box-border">
+          <img src="./Bhullar Webstore_files/clearance-sale.png">
+         <!-- <h2>Buy 1 Get 1 Free</h2> -->
+         </div>
+          <!--Sale-->
+        <!--  <div class="images div-blocks big-box-border">
+            <img src="img/c apri-women.png">
+            <h2>Sale</h2>
+         </div> -->
+        <!-- Note: All 5 products are identical -->
+        <div id="products">
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/men-formal-&amp;blue.jpg" alt="Men">
+    </header>
+    
+    <lable class="productName">Men</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  30</del> </lable> <br>
+    CAD $ 10 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here <br> 
+    Color : y<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>1</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/women-formal-green2.jpg" alt="Women 2">
+    </header>
+    
+    <lable class="productName">Women 2</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  45</del> </lable> <br>
+    CAD $ 29 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : M <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>2</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/kid-girl-casual-black.gif" alt="Baby &amp; Kids 3">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 3</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : b<br>
+    Size : L <br>
+    <lable>2</lable> <br>
+    <lable>3</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/men-formal-yellow.jpg" alt="Sale 4">
+    </header>
+    
+    <lable class="productName">Sale 4</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : b<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>1</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/men-formal-white.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/woman-formal-red.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/kid-girl-casual-yellow.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/woman-casual-black.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/men-formal-red-shirt.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/woman-formal-blue.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/kid-girl-formal-black.gif" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/woman-casual-shirt-black.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/men-formal-blue2.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/women-casual-green.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/kid-girl-formal-black3.jpg.gif" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/woman-casual-black.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/men-casual-white.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/woman-casual-yellow.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/kid-girl-casual-blue.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/kid-boy.jpg" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article>
+
+  <article class="product">
+    <header class="images">
+      <img src="./Bhullar Webstore_files/men-casual-jacket-blue.gif" alt="Baby &amp; Kids 5">
+    </header>
+    
+    <lable class="productName">Baby &amp; Kids 5</lable> <br>
+ 
+    <lable class="productPrice"><del> CAD $  50</del> </lable> <br>
+    CAD $ 39 <br>
+    <button type="button" class="button">Add to Cart </button>  | <button type="button" class="btnSeeMore button">See More</button>
+    <div class="productDetails">
+    Details here 2 <br> 
+    Color : w<br>
+    Size : L <br>
+    <lable>1</lable> <br>
+    <lable>2</lable> <br>
+    <lable>true</lable> <br>
+    <lable>4</lable><br>
+    </div>
+
+  </article></div>
+          <!-- Product 1 -->
+          
+
+          <!--Product 2 -->
+         
+
+      <section>
+        <nav class="Page" aria-label="Product Pages">
+          <ul class="paging">
+            <li><a href="http://127.0.0.1:5500/index.html#" aria-label="Previous page">Prev</a></li>
+            <li><a class="activPage" href="http://127.0.0.1:5500/index.html#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#" aria-label="Page 2">2</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#" aria-label="Page 3">3</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#" aria-label="Page 4">4</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#" aria-label="Next page">Next</a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+ <!--Subscribe-->
+ <div class="grid-subscribe">
+    <ul>
+    <li><i class="far fa-envelope" aria-hidden="true"></i></li>
+    <li><h1>Stay Up To Date</h1></li>
+    <li><input class="txtSubscribe" type="text" placeholder="Your Email Address"></li>
+    <li><button class="button">Subscribe</button></li>
+  </ul>
+</div>
+    <footer>
+      <nav aria-label="Legal">
+        <ul class="mainFooter">
+          <li><a href="http://127.0.0.1:5500/index.html#">CUSTOMER SERVICE</a>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html#">FAQs</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Track Order</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Returns</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Shipping</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Coupons</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Store Locator</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Accessibility</a></li>
+            </ul>
+          </li>
+          <li><a href="http://127.0.0.1:5500/index.html#">EXPLORE</a>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html#">Bhullar Webstore</a></li>
+            </ul>
+          </li>
+          <li><a href="http://127.0.0.1:5500/index.html#">ABOUT</a>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html#">Bhullar Webstore</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Careers</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Privacy</a></li>
+            </ul>
+          </li>
+          <li><a href="http://127.0.0.1:5500/index.html#">CONTACT US</a>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html#">Email Us</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Call us: 1.800.222.1111</a></li>
+            </ul>
+          </li>
+          <li><a href="http://127.0.0.1:5500/index.html#">OUR GLOBAL WEBSITES</a>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html#"> <select>
+                  <option value="0">Canada</option>
+                    <option value="1">America</option>
+                    <option value="2">India</option>
+                    <option value="3">United Kingdom</option>
+                  </select></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <ul class="sociallinks">
+        <li><a href="http://127.0.0.1:5500/index.html#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="http://127.0.0.1:5500/index.html#"><i class="fab fa-facebook-f" aria-hidden="true"></i> </a></li>
+        <li><a href="http://127.0.0.1:5500/index.html#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="http://127.0.0.1:5500/index.html#"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
+        <li><a href="http://127.0.0.1:5500/index.html#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+      </ul>
+      <p class="copyright">Copyright <i class="far fa-copyright" aria-hidden="true"></i> 2019 Bhullar Webstore</p>
+    </footer>
+
+    <!-- [Remove all default comments in this document after reading] -->
+
+    <script src="./Bhullar Webstore_files/index.js"></script>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+ </body></html>

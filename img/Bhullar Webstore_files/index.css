@@ -72,7 +72,7 @@ padding: 0;}
     }
 .ws-logo-pic img 
 {
-    width: 5%;
+    width: 5em;
     text-align: center;
     display:block;
     margin-left: auto;
@@ -174,12 +174,16 @@ padding:0.5em;
 text-align: center!important;
 }
 .paging{
-    width: 45%;
+    width: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 1em;
-    justify-content: center;
-    margin-left: 30%;
+    text-align: center;
+}
+.Page{
+
+    justify-content: center!important;
+    justify-content: space-around;   
 }
 .activPage{font-weight: bold; background-color: black; color: white;}
 .grid-subscribe
@@ -198,12 +202,10 @@ text-align: center!important;
     width: 100%;
     justify-self: center;
     align-self: center;
-    justify-content: space-around;
-    padding: 0.5em;
 }
 .grid-subscribe ul li
 {
-    padding-left: 20%;
+    padding-left:0.5em;
 }
 .txtSubscribe
 {
@@ -211,7 +213,7 @@ text-align: center!important;
     border: var(--darkgrey) solid;
     border-radius: 0.3em;
     padding: 0.1em;
-    margin-top: -0.2em;
+    margin-top:0.1em;
  }
  .images 
  {
@@ -230,8 +232,7 @@ text-align: center!important;
 .rating{margin-left: 4em;}
 .product
 {
-    text-align: center;
-    margin-bottom: 1em;
+    text-align: center;margin-bottom: 1em;
     border: var(--grey)solid 0em;
     box-shadow: 0em 0.2em 0.2em #616669;
     padding-top: 0.5em;
