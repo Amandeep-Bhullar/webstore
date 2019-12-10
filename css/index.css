@@ -259,7 +259,9 @@ legend ul, ol{
     grid-template-columns: 1fr 1fr 1fr;
 }
 */
-.productDetails{display: none;}
+.product-details{
+    display:none;
+}
 del{
     opacity: 0.5;;
 }
@@ -393,4 +395,27 @@ display: block;
     place-items: start;
     align-self: center; 
 }
+.blink {
+    background-color: red;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  @keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+  span.stars, span.stars span {
+    display: block;
+    background: url(stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+
 }

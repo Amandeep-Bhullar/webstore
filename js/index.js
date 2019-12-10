@@ -1,10 +1,13 @@
+
+let btnSeeMore=document.getElementById("btnSeeMore");
+
 const allProducts = [
   {
     productId:1,
-    productName: `Men`,
-    productColor: `y`,
-    productSize: `L`,
-    productDescription:'Details here',
+    productName: `Slim Fit Light Blue Suit Blazer`,
+    productColor: `Blue`,
+    productSize: `Small`,
+    productDescription:'Slim Fit Light Blue Suit Blazer',
     productType:1,
     productCategory:1,
     productActualPrice: 30,
@@ -15,10 +18,10 @@ const allProducts = [
   },
   {
     productId:2,
-    productName: `Women 2`,
-    productColor: `w`,
-    productSize: `M`,
-    productDescription:'Details here 2',
+    productName: `Kenneth Cole New York Fencer Melton Coat`,
+    productColor: `Green`,
+    productSize: `Medium`,
+    productDescription:'Kenneth Cole New York Fencer Melton Wool Maxi Coat',
     productType:1,
     productCategory:2,
     productActualPrice: 45,
@@ -29,11 +32,11 @@ const allProducts = [
   },
   {
     productId:3,
-    productName: `Baby & Kids 3`,
-    productColor: `b`,
-    productSize: `L`,
-    productDescription:'Details here 2',
-    productType:2,
+    productName: `Trixxi Long Sleeve Smocked Dress`,
+    productColor: `Black`,
+    productSize: `Small`,
+    productDescription:'Trixxi Long Sleeve Smocked Dress (Big Girls)',
+    productType:1,
     productCategory:3,
     productActualPrice: 50,
     productAvailable: true,
@@ -43,10 +46,10 @@ const allProducts = [
   },
   {
     productId:4,
-    productName: `Sale 4`,
-    productColor: `b`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Slim Fit Yellow Suit Blazer`,
+    productColor: `Yellow`,
+    productSize: `Large`,
+    productDescription:'Slim Fit Yellow Suit Blazer',
     productType:1,
     productCategory:1,
     productActualPrice: 50,
@@ -57,12 +60,12 @@ const allProducts = [
   },
   {
     productId:5,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Slim Fit Blazer With Contrast Lapel`,
+    productColor: `Blue`,
+    productSize: `Medium`,
+    productDescription:'Slim Fit Blue Suit Blazer With Contrast Lapel',
     productType:1,
-    productCategory:2,
+    productCategory:1,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -72,10 +75,10 @@ const allProducts = [
   ,
   {
     productId:6,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Women Elegant Two Button Business Suit`,
+    productColor: `Red`,
+    productSize: `Large`,
+    productDescription:'Women Elegant Two Button Business Suits Tops Outwear ',
     productType:1,
     productCategory:2,
     productActualPrice: 50,
@@ -87,12 +90,12 @@ const allProducts = [
   ,
   {
     productId:7,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
-    productType:1,
-    productCategory:2,
+    productName: `Slouchy Soft Brushed Casual Basic`,
+    productColor: `Yellow`,
+    productSize: `Medium`,
+    productDescription:'Slouchy Soft Brushed Casual Basic',
+    productType:2,
+    productCategory:3,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -101,11 +104,11 @@ const allProducts = [
   },
   {
     productId:8,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
-    productType:1,
+    productName: `Casual Round Neck Loose Fit Short Sleeve`,
+    productColor: `Black`,
+    productSize: `Medium`,
+    productDescription:'Casual Round Neck Loose Fit Short Sleeve T-Shirt Blouse Tops',
+    productType:2,
     productCategory:2,
     productActualPrice: 50,
     productAvailable: true,
@@ -115,12 +118,12 @@ const allProducts = [
   },
   {
     productId:9,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Mens Dress Shirts Regular Fit Long Sleeve`,
+    productColor: `Red`,
+    productSize: `Medium`,
+    productDescription:' Mens Dress Shirts Regular Fit Long Sleeve Men Shirt',
     productType:1,
-    productCategory:2,
+    productCategory:1,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -129,10 +132,10 @@ const allProducts = [
   },
   {
     productId:10,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Office Workwear Sheath Dress`,
+    productColor: `Blue`,
+    productSize: `Large`,
+    productDescription:'Office Workwear Sheath Dress',
     productType:1,
     productCategory:2,
     productActualPrice: 50,
@@ -143,12 +146,12 @@ const allProducts = [
   },
   {
     productId:11,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Neck Floor-Length Lace Chiffon `,
+    productColor: `Black`,
+    productSize: `Large`,
+    productDescription:'Neck Floor-Length Lace Chiffon ',
     productType:1,
-    productCategory:2,
+    productCategory:3,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -157,11 +160,11 @@ const allProducts = [
   },
   {
     productId:12,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
-    productType:1,
+    productName: `Short Sleeve Tie Front Knot Casual Loose Fit `,
+    productColor: `Black`,
+    productSize: `Small`,
+    productDescription:'Short Sleeve Tie Front Knot Casual Loose Fit ',
+    productType:2,
     productCategory:2,
     productActualPrice: 50,
     productAvailable: true,
@@ -171,12 +174,12 @@ const allProducts = [
   },
   {
     productId:13,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Suits Slim Fit Formal Dress Clothes`,
+    productColor: `Blue`,
+    productSize: `Medium`,
+    productDescription:'Suits Slim Fit Formal Dress Clothes',
     productType:1,
-    productCategory:2,
+    productCategory:1,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -185,11 +188,11 @@ const allProducts = [
   },
   {
     productId:14,
-    productName: `Baby & Kids 5`,
+    productName: `Long Sleeve Round Neck Dress`,
     productColor: `w`,
     productSize: `L`,
-    productDescription:'Details here 2',
-    productType:1,
+    productDescription:'Long Sleeve Round Neck Dress',
+    productType:2,
     productCategory:2,
     productActualPrice: 50,
     productAvailable: true,
@@ -199,12 +202,12 @@ const allProducts = [
   },
   {
     productId:15,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Lace Glitter Vintage Pageant Prom Dress`,
+    productColor: `Black`,
+    productSize: `Large`,
+    productDescription:'Tulle Lace Glitter Vintage Pageant Prom Dress',
     productType:1,
-    productCategory:2,
+    productCategory:3,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -213,10 +216,10 @@ const allProducts = [
   },
   {
     productId:16,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Casual Round Neck Loose Fit Short Sleeve`,
+    productColor: `Black`,
+    productSize: `Small`,
+    productDescription:'Casual Round Neck Loose Fit Short Sleeve',
     productType:1,
     productCategory:2,
     productActualPrice: 50,
@@ -227,12 +230,12 @@ const allProducts = [
   },
   {
     productId:17,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
-    productType:1,
-    productCategory:2,
+    productName: `Adult Long Sleeve Tee`,
+    productColor: `White`,
+    productSize: `Large`,
+    productDescription:'Adult Long Sleeve Tee',
+    productType:2,
+    productCategory:1,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -241,11 +244,11 @@ const allProducts = [
   },
   {
     productId:18,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
-    productType:1,
+    productName: `Women 2 Piece Sport Outfits Long Sleeve`,
+    productColor: `Yellow`,
+    productSize: `Small`,
+    productDescription:'Women 2 Piece Sport Outfits Long Sleeve',
+    productType:2,
     productCategory:2,
     productActualPrice: 50,
     productAvailable: true,
@@ -255,12 +258,12 @@ const allProducts = [
   },
   {
     productId:19,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Classy Vintage Swing Kids Party Dress`,
+    productColor: `Blue`,
+    productSize: `Small`,
+    productDescription:'Classy Vintage Swing Kids Party Dress',
     productType:1,
-    productCategory:2,
+    productCategory:3,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -269,12 +272,12 @@ const allProducts = [
   },
   {
     productId:20,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
+    productName: `Long Sleeve Button-Down Oxford Shirt`,
+    productColor: `White`,
+    productSize: `Large`,
+    productDescription:'Long Sleeve Solid Button-Down Oxford Shirt',
     productType:1,
-    productCategory:2,
+    productCategory:3,
     productActualPrice: 50,
     productAvailable: true,
     productDiscountedPrice: 39,
@@ -283,19 +286,30 @@ const allProducts = [
   },
   {
     productId:21,
-    productName: `Baby & Kids 5`,
-    productColor: `w`,
-    productSize: `L`,
-    productDescription:'Details here 2',
-    productType:1,
-    productCategory:2,
-    productActualPrice: 50,
+    productName: `Winter Sherpa Denim Jacket Windbreaker`,
+    productColor: `Blue`,
+    productSize: `Large`,
+    productDescription:'Winter Sherpa Denim Jacket Windbreaker',
+    productType:2,
+    productCategory:1,
+    productActualPrice: 60,
     productAvailable: true,
     productDiscountedPrice: 39,
     productRating: 4,
     productImageName:'men-casual-jacket-blue.gif',
   }
 ];
+
+function toggleShowMoreDetails(productId)
+{
+  let productDiv=document.getElementById(`productDetails${productId}`);
+  
+  if(productDiv.style.display==='none'){
+    productDiv.style.display='block';
+  } else{
+    productDiv.style.display='none';
+  }
+}
 
 
 function getProductListsAsHTML(singleProduct)
@@ -305,62 +319,32 @@ let productList = `
     <header class='images'>
       <img src='img/${singleProduct.productImageName}' alt='${singleProduct.productName}'>
     </header>
-    <lable class='productName'>${singleProduct.productName}</lable> <br>
-    ${singleProduct.productDescription} <br>
-    <lable class='productPrice'>CAD $ ${singleProduct.productActualPrice}</lable> <br>
-    CAD $ ${singleProduct.productDiscountedPrice}</lable> <br>
-    <a href='${singleProduct.productId}'>See More</a>
-    <div class='productDetails'>
-    Color : ${singleProduct.productColor}<br>
-    Size : ${singleProduct.productSize} <br>
-    <lable>${singleProduct.productType}</lable> <br>
-    <lable>${singleProduct.productCategory}</lable> <br>
-    <lable>${singleProduct.productAvailable}</lable> <br>
-    <lable>${singleProduct.productRating}</lable><br>
-    </div>
+    
+    <h4 class='productName'>${singleProduct.productName}</h4>
+    <h4 class='productPrice'><del> CAD $  ${singleProduct.productActualPrice}</del> </h4> 
+    <h4 class='blink'> Sale CAD $ ${singleProduct.productDiscountedPrice}</h4>
+    <button type='button' class='button'>Add to Cart </button>  | <button id='btnSeeMore' onclick='toggleShowMoreDetails(${singleProduct.productId})' class='btn-see-more button'>See More</button>
 
+    <div id='productDetails${singleProduct.productId}' class='product-details'>
+    <h4>${singleProduct.productDescription} </h4>
+    <h4>Color : ${singleProduct.productColor}</h4>
+    <h4>Size : ${singleProduct.productSize} </h4>
+    <h4>${singleProduct.productType}</h4> 
+    <h4>${singleProduct.productCategory}</h4> 
+    <h4>${singleProduct.productAvailable}</h4> 
+    <h4>${singleProduct.productRating}</h4>
+    </div>
   </article>`;
   
   return productList;
 }
 
 
-////not done yet.......start from here
-// function filterProducts()
-// {
-//   //let productType='1'; //dropDownProductType.options[employeeTypeCodeDropdownList.selectedIndex].value;
-//     document.getElementById('products').innerHTML=allProducts.slice[0,3].map(getProductListsAsHTMLByFilter).join('\n');
-// }
-//new thing justwill check tomorrow
-// function getProductListsAsHTMLByFilter (singleProduct)
-// {
-//   let productType=1; 
-//   if(singleProduct.productType==productType)
-//   {
-    //
-//let resultFromSearch=allProducts.filter(c=>c.productImageName.toLowerCase().includes(whatToSEarch))/
-   /* //alert(singleProduct.productType);
-let productList=
-`<article class='product'>
-<header class='images'>
-  <img src='img/${singleProduct.productImageName}' alt='${singleProduct.productName}'>
-</header>
-<lable class='productPrice'>CAD $${singleProduct.productActualPrice}</lable> <br>
-<lable class='productName'>${singleProduct.productName}</lable> <br>
-<a href='${singleProduct.productId}'>See More</a>
-</article>`
-  }
-    return productList;
-}*/
-/*
-//for toggle button for the single product
-const toggleCourseView = event => {
-  document.getElementById('courses').classList.toggle('grid-view');
-}
-*/
+
 //1 function,2 parameters,3return,4description(describe these things on th function or inside the function)
 
 //submitTheFilter is for the filtering by the submit button with id of filterForm
+
 const submitTheFilter=event=>{//documet.getElementById('')
   document.getElementById('').submit();
 }
@@ -390,7 +374,32 @@ function filterProducts(event, arrToFilter)
   showSomeProducts(arrToShow);
 
 }
-// Toggle button
+
+//start from sorting not working yet
+//Declare variable for sorting
+// Sort Products
+// let textBoxSearch=document.getElementById("textBoxSearch");
+
+// function sortProducts(event, arrToSort)
+// {
+//   event.preventDefault();
+//   const searchProduct = event.target.elements.textBoxSearch.value;
+//   // Copy the incoming Array (just in case)
+//   let arrToShow = arrToSort.slice();
+//   if (searchProduct ) {
+//     // Filter by Namw
+//     arrToShow = arrToShow.filter(prod => +prod.productName ===+searchProduct);
+//   }
+//   showSomeProducts(arrToShow);
+// }
+// Sort Products not working yet
+// let allProducts=allProducts;
+// let sortProducts=allProducts.split(/\W+/).filter(sortProduct=>sortProducts.lengh>2);
+// sortProducts.sort((dropDownProductType,dropDownProductCategory)=>dropDownProductType.length-dropDownProductCategory.length);
+// console.log(sortProducts);
+
+
+// Toggle button to hide and show the main navbar
 let getButton = document.querySelector(".btn");
 let element = document.querySelector(".main-navbar");
 let temp = true;
@@ -403,18 +412,30 @@ getButton.addEventListener('click',function(){
   } 
 });
 
+
+
+
+//Show the detail of the product with onclick of see more button
+const handleClickOfMore = event => {
+  if (!event.target.matches('btnSeeMore')) {
+    return;
+  }
+  const courseid = parseInt(event.target.dataset.courseid);
+  addItemToCart(courseid);
+}
+
 function showSomeProducts(arr)
 {
   document.getElementById('products').innerHTML = arr.map(getProductListsAsHTML).join('\n');
 }
+
+
 window.addEventListener('load', () => {
   document.getElementById("dropDownProductType").addEventListener('change', event => console.log('Change'))
   const formSearchProducts = document.getElementById("formQuickFind");
   formSearchProducts.addEventListener("submit", event => filterProducts(event, allProducts));
   showSomeProducts(allProducts);
 });
-
-
 
 
 
