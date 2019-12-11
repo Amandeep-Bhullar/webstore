@@ -20,10 +20,10 @@
       <a href="index.html"><img src="img/logo-of-webstore.png" alt="HTML Logo (replace this)"></a>
       </div>
       <div class="icon-n-bar">
-          <div class="srch-icon">
+          <div class="hide-in-mobile srch-icon">
               <i class="fas fa-search-location" ></i> 
           </div>     
-          <div class="srch-bar">
+          <div class="hide-in-mobile srch-bar">
               <input type="search" id="textBoxSearch" name="textBoxSearch">
           </div>  
       </div>
@@ -32,8 +32,8 @@
           <li class="button"><i class="fas fa-microphone-alt"></i> Search By Voice</li>
           <li class="button"><i class="fas fa-american-sign-language-interpreting"></i> English</li>
           <li class="button liIconMenu"><i class="fas fa-sign-in-alt"></i></li>
-          <li class="button liIconMenu"><i class="fas fa-shopping-cart"></i></li>
-          <li class="button liIconMenu hideMenu"><button class="btn btn-primary"><i class="fas fa-bars"></i> </button> </li>
+          <li class="button"><i class="fas fa-shopping-cart"> <label id="lblProductCart"></label></i></li>
+          <li class="button liIconMenu hideMenu"><button class="btn btn-primary"><i class="fas fa-bars"></i></button></li>
       </ul>
     </div>
    </div>
@@ -121,16 +121,33 @@
       </header>
 <!-- <h2>Search Results in Quick search box</h2> -->
 <article class="grid-find-advertise">
-      <section class="quick-find big-box-border">
-          <form id="formQuickFind">
-              <article class="topbar-of-quickfind">
-                  <h3>
+      <section  class="quick-find big-box-border">
+          <form id="formQuickFindM" class="quick-search-grid">
+            <article class="search-in-mobile">
+                <select class="dropdownProduct" id="dropDownProductTypeM" name="dropDownProductTypeM">
+                  <option value="0">Select Product Type</option>
+                  <option name="formal" value="1">Formal</option>
+                  <option value="2">Casual</option>
+                </select>
+                <select class="dropdownProduct" id="dropDownProductCategoryM" name="dropDownProductCategoryM">
+                    <option value="0">Select Category</option>
+                    <option value="1">Men</option>
+                    <option value="2">Women</option>
+                    <option value="3">Baby & Kids</option>
+                  </select>
+                  <div class="search-button-container"><button type="submit" id="buttonSearchM" class="button"><i class="fas fa-search-location" ></i> </button></div>
+            </article>
+          </form>
+            <form id="formQuickFind" class="quick-search-grid">
+            <div class="hide-in-mobile">
+              <article class="hide-in-mobile topbar-of-quickfind">
+                  <h3 >
                       Quick Find Your Product
                   </h3>
                 </article>
               <article class="main-navbar type">
-                  <h4>Product Type</h4>
-                  <label></label>
+                  <h4 class="hide-in-mobile">Product Type</h4>
+                  <label class="hide-in-mobile"></label>
                   <select class="dropdownProduct" id="dropDownProductType" name="dropDownProductType">
                     <option value="0">Select Product Type</option>
                     <option name="formal" value="1">Formal</option>
@@ -138,8 +155,8 @@
                   </select>
               </article>
               <article class="category">
-                <h4>Product Category</h4>
-                <label></label>
+                <h4 class="hide-in-mobile">Product Category</h4>
+                <label class="hide-in-mobile"></label>
                 <select class="dropdownProduct" id="dropDownProductCategory" name="dropDownProductCategory">
                   <option value="0">Select Product Category</option>
                   <option value="1">Men</option>
@@ -150,15 +167,16 @@
               <article class="search">
                 <div><button type="submit" id="buttonSearch" class="button">Search</button></div>
               </article>
+            </div>
           </form>
         </section>
          <!--70% off-->
          <section class="grid-addvertisement">
-         <div class="images imgcover div-blocks sale-box-border">
+         <div class="hide-in-mobile images imgcover div-blocks sale-box-border">
             <img src="img/sale-70-banner.gif">
            <!-- <h2>70% Off ON These Products</h2> -->
          </div>
-        <div class="images imgcover div-blocks sale-box-border">
+        <div class="hide-in-mobile images imgcover div-blocks sale-box-border">
           <img src="img/clearance-sale.png">
          <!-- <h2>clearance> -->
          </div>
