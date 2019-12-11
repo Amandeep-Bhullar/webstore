@@ -159,6 +159,10 @@ margin-top: 0.3em;
 text-align: center;
 padding:0.5em;
 }
+/*If tyhe sleek quick searchbar is not working the delete this class  from the HTML form not from here because this class is used in advertisements too*/
+.hide-in-mobile{
+    display: none;
+}
 .type{
     display: grid;
     grid-template-columns:30% 1% 65%;
@@ -198,6 +202,7 @@ text-align: center!important;
     background-color: var(--grey);
     padding-top: 0.5em;
     margin: 0.5em;
+    margin-left: 2.5em;
 }
 .grid-subscribe ul
 {
@@ -208,6 +213,7 @@ text-align: center!important;
     align-self: center;
     justify-content: space-around;
     padding: 0.5em;
+    margin-left: 7em;
 }
 .grid-subscribe ul li
 {
@@ -290,6 +296,12 @@ margin: 1em;
     object-fit: cover;
 
 }
+
+.not-available {
+    opacity: 0.6 ;
+}
+
+
 /*
 .grid-addvertisement div{
     background-color: var(--dark);
@@ -303,16 +315,20 @@ margin: 1em;
     grid-template-columns: 1fr 1fr;
 }
 .all-products{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hide-in-mobile{
+    display: block;
+}
 @media screen and (min-width: 55em)
 {
     /*For window screen 880px*/
 body{
     position: relative;
+}
+.hide-in-mobile{
+    display: block;
 }
 .all-products{
     display: grid;
@@ -338,6 +354,7 @@ grid-template-columns: 33% 67%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: -1.6em;
+    padding-top: 0.5em;
 }
 .topbar li{
     border-bottom: 0em solid;
