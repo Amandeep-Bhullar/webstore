@@ -1,5 +1,6 @@
 
 let btnSeeMore=document.getElementById("btnSeeMore");
+let cartCounter=0;
 
 const allProducts = [
   {
@@ -12,7 +13,7 @@ const allProducts = [
     productCategory:1,
     productActualPrice: 30,
     productAvailable: true,
-    productDiscountedPrice: 10,
+    productDiscountedPrice: null,
     productRating: 4,
     productImageName:'men-formal-&blue.jpg',
   },
@@ -25,7 +26,7 @@ const allProducts = [
     productType:1,
     productCategory:2,
     productActualPrice: 45,
-    productAvailable: true,
+    productAvailable: false,
     productDiscountedPrice: 29,
     productRating: 2,
     productImageName:'women-formal-green2.jpg',
@@ -110,7 +111,7 @@ const allProducts = [
     productDescription:'Casual Round Neck Loose Fit Short Sleeve T-Shirt Blouse Tops',
     productType:2,
     productCategory:2,
-    productActualPrice: 50,
+    productActualPrice: null,
     productAvailable: true,
     productDiscountedPrice: 39,
     productRating: 4,
@@ -300,6 +301,7 @@ const allProducts = [
   }
 ];
 
+// See more details toggle button
 function toggleShowMoreDetails(productId)
 {
   let productDiv=document.getElementById(`productDetails${productId}`);
@@ -314,16 +316,29 @@ function toggleShowMoreDetails(productId)
 
 function getProductListsAsHTML(singleProduct)
 {
+
+  let price = `<h4 class='productPrice'>CAD $  ${singleProduct.productActualPrice}</h4>`;
+  let available = ``;
+
+  if (!singleProduct.productAvailable) {
+    available = 'not-available'
+    price = `<h4>Not available</h4>`;
+  } else if (singleProduct.productDiscountedPrice) {
+    price = `<h4 class='productPrice'><del> CAD $  ${singleProduct.productActualPrice}</del> </h4> 
+    <h4 class='blink'> Sale CAD $ ${singleProduct.productDiscountedPrice}</h4>`
+  }
+
+
+
 let productList = `
-  <article class='product'>
+  <article class='product ${available}'>
     <header class='images'>
       <img src='img/${singleProduct.productImageName}' alt='${singleProduct.productName}'>
     </header>
     
     <h4 class='productName'>${singleProduct.productName}</h4>
-    <h4 class='productPrice'><del> CAD $  ${singleProduct.productActualPrice}</del> </h4> 
-    <h4 class='blink'> Sale CAD $ ${singleProduct.productDiscountedPrice}</h4>
-    <button type='button' class='button'>Add to Cart </button>  | <button id='btnSeeMore' onclick='toggleShowMoreDetails(${singleProduct.productId})' class='btn-see-more button'>See More</button>
+    ${price}
+    <button type='button' id='btnAddToCart' onclick='addProductsToCart(${singleProduct.productId})' class='button'>Add to Cart </button>  | <button id='btnSeeMore' onclick='toggleShowMoreDetails(${singleProduct.productId})' class='btn-see-more button'>See More</button>
 
     <div id='productDetails${singleProduct.productId}' class='product-details'>
     <h4>${singleProduct.productDescription} </h4>
@@ -339,7 +354,10 @@ let productList = `
   return productList;
 }
 
-
+function addProductsToCart(){
+  cartCounter++;
+  document.getElementById("lblProductCart").innerHTML=cartCounter;
+}
 
 //1 function,2 parameters,3return,4description(describe these things on th function or inside the function)
 
@@ -349,6 +367,8 @@ const submitTheFilter=event=>{//documet.getElementById('')
   document.getElementById('').submit();
 }
 
+
+//Filter product by dropdown list of quick find for tablet and big screen
 function filterProducts(event, arrToFilter)
 {
   event.preventDefault();
@@ -357,6 +377,34 @@ function filterProducts(event, arrToFilter)
 
   const dropDownListType = parseInt(event.target.elements.dropDownProductType.value);//filter by type
   const dropDownListCategory = parseInt(event.target.elements.dropDownProductCategory.value); //filter by category
+  
+
+  // Copy the incoming Array (just in case)
+  let arrToShow = arrToFilter.slice();
+
+  if (dropDownListType) {
+    // Filter by dropDownListType
+    arrToShow = arrToShow.filter(prod => +prod.productType ===+dropDownListType);
+  }
+  if (dropDownListCategory) {
+    // Filter by dropDownListCategory
+    console.log(dropDownListCategory);
+    arrToShow = arrToShow.filter(prod => +prod.productCategory == +dropDownListCategory);
+  }
+
+  showSomeProducts(arrToShow);
+}
+
+// Filter product by dropdown list of quick find for Mobile
+function filterProductsM(event, arrToFilter)
+{
+  event.preventDefault();
+  // dropDownProductType
+  // dropDownProductCategory
+
+  const dropDownListType = parseInt(event.target.elements.dropDownProductTypeM.value);//filter by type
+  const dropDownListCategory = parseInt(event.target.elements.dropDownProductCategoryM.value); //filter by category
+  
 
   // Copy the incoming Array (just in case)
   let arrToShow = arrToFilter.slice();
@@ -376,30 +424,17 @@ function filterProducts(event, arrToFilter)
 }
 
 //start from sorting not working yet
-//Declare variable for sorting
-// Sort Products
-// let textBoxSearch=document.getElementById("textBoxSearch");
-
-// function sortProducts(event, arrToSort)
-// {
-//   event.preventDefault();
-//   const searchProduct = event.target.elements.textBoxSearch.value;
-//   // Copy the incoming Array (just in case)
-//   let arrToShow = arrToSort.slice();
-//   if (searchProduct ) {
-//     // Filter by Namw
-//     arrToShow = arrToShow.filter(prod => +prod.productName ===+searchProduct);
-//   }
-//   showSomeProducts(arrToShow);
-// }
-// Sort Products not working yet
-// let allProducts=allProducts;
-// let sortProducts=allProducts.split(/\W+/).filter(sortProduct=>sortProducts.lengh>2);
-// sortProducts.sort((dropDownProductType,dropDownProductCategory)=>dropDownProductType.length-dropDownProductCategory.length);
-// console.log(sortProducts);
+const runTheFilter=theForm=>{
+  const categoryToSearch=theForm.elements.productCategory.value;
+  const nameToSearch=theForm.elements.productName.value;
+  const saleToSearch=theForm.element.productId.value;
+  console.log(theForm.element)
+}
 
 
-// Toggle button to hide and show the main navbar
+
+
+// Toggle button to hide and show the main navbar in mobile and tablet
 let getButton = document.querySelector(".btn");
 let element = document.querySelector(".main-navbar");
 let temp = true;
@@ -431,11 +466,17 @@ function showSomeProducts(arr)
 
 
 window.addEventListener('load', () => {
+  document.getElementById("dropDownProductTypeM").addEventListener('change', event => console.log('Change'))
+  const formSearchProductsM = document.getElementById("formQuickFindM");
+  formSearchProductsM.addEventListener("submit", event => filterProductsM(event, allProducts));
+
   document.getElementById("dropDownProductType").addEventListener('change', event => console.log('Change'))
   const formSearchProducts = document.getElementById("formQuickFind");
   formSearchProducts.addEventListener("submit", event => filterProducts(event, allProducts));
   showSomeProducts(allProducts);
 });
+
+
 
 
 
