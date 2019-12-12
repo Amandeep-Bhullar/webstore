@@ -373,7 +373,7 @@ function getProductListsAsHTML(singleProduct)
 
 
 let productList = `
-  <article class='product ${available}'>
+  <article id='products' class='product ${available}'>
     <header class='images'>
       <img src='img/${singleProduct.productImageName}' alt='${singleProduct.productName}'>
     </header>
@@ -383,13 +383,13 @@ let productList = `
     <button type='button' id='btnAddToCart' onclick='addProductsToCart(${singleProduct.productId})' class='button'>Add to Cart </button>  | <button id='btnSeeMore' onclick='toggleShowMoreDetails(${singleProduct.productId})' class='btn-see-more button'>See More</button>
 
     <div id='productDetails${singleProduct.productId}' class='product-details'>
-    <h4>${singleProduct.productDescription} </h4>
+    <h4>Description:${singleProduct.productDescription} </h4>
     <h4>Color : ${singleProduct.productColor}</h4>
     <h4>Size : ${singleProduct.productSize} </h4>
-    <h4>${singleProduct.productType}</h4> 
-    <h4>${singleProduct.productCategory}</h4> 
-    <h4>${singleProduct.productAvailable}</h4> 
-    <h4>${singleProduct.productRating}</h4>
+    <h4>Product Type:${singleProduct.productType}</h4> 
+    <h4>Product Category:${singleProduct.productCategory}</h4> 
+    <h4>Product Availability:${singleProduct.productAvailable}</h4> 
+    <h4>Product Rating:${singleProduct.productRating}</h4>
     </div>
   </article>`;
   
@@ -441,16 +441,10 @@ function filterProducts(event, arrToFilter)
 function filterProductsM(event, arrToFilter)
 {
   event.preventDefault();
-  // dropDownProductType
-  // dropDownProductCategory
-
   const dropDownListType = parseInt(event.target.elements.dropDownProductTypeM.value);//filter by type
   const dropDownListCategory = parseInt(event.target.elements.dropDownProductCategoryM.value); //filter by category
-  
-
   // Copy the incoming Array (just in case)
   let arrToShow = arrToFilter.slice();
-
   if (dropDownListType) {
     // Filter by dropDownListType
     arrToShow = arrToShow.filter(prod => +prod.productType ===+dropDownListType);
@@ -460,19 +454,24 @@ function filterProductsM(event, arrToFilter)
     console.log(dropDownListCategory);
     arrToShow = arrToShow.filter(prod => +prod.productCategory == +dropDownListCategory);
   }
-
   showSomeProducts(arrToShow);
-
 }
 
-//start from sorting not working yet
-const runTheFilter=theForm=>{
-  const categoryToSearch=theForm.elements.productCategory.value;
-  const nameToSearch=theForm.elements.productName.value;
-  const saleToSearch=theForm.element.productId.value;
-  console.log(theForm.element)
-}
 
+// Filter product by SearchBox
+function filterProductsBySearchBox(event, arrToFilter)
+{
+  event.preventDefault();
+  const searchTextBox = event.target.elements.textBoxSearch.value.toLowerCase();
+  
+  // Copy the incoming Array (just in case)
+  let arrToShow = arrToFilter.slice();
+  if (searchTextBox) {
+    // Filter by dropDownListType
+    arrToShow = arrToShow.filter(prod=> prod.productName.toLowerCase().includes(searchTextBox.trim()));
+  }
+  showSomeProducts(arrToShow);
+}
 
 
 
@@ -492,7 +491,7 @@ getButton.addEventListener('click',function(){
 
 
 
-//Show the detail of the product with onclick of see more button
+//Show the detail of the product with onclick of see more button 
 const handleClickOfMore = event => {
   if (!event.target.matches('btnSeeMore')) {
     return;
@@ -506,8 +505,10 @@ function showSomeProducts(arr)
   document.getElementById('products').innerHTML = arr.map(getProductListsAsHTML).join('\n');
 }
 
-
+  
+//........execution.........
 window.addEventListener('load', () => {
+
   document.getElementById("dropDownProductTypeM").addEventListener('change', event => console.log('Change'))
   const formSearchProductsM = document.getElementById("formQuickFindM");
   formSearchProductsM.addEventListener("submit", event => filterProductsM(event, allProducts));
@@ -515,7 +516,14 @@ window.addEventListener('load', () => {
   document.getElementById("dropDownProductType").addEventListener('change', event => console.log('Change'))
   const formSearchProducts = document.getElementById("formQuickFind");
   formSearchProducts.addEventListener("submit", event => filterProducts(event, allProducts));
+  
+
+  document.getElementById("textBoxSearch").addEventListener('change', event => console.log('Change'))
+  const formSearchTextBox = document.getElementById("formMainSearch");
+  formSearchTextBox.addEventListener("submit", event => filterProductsBySearchBox(event, allProducts));
+
   showSomeProducts(allProducts);
+  //document.getElementById("textBoxSearch").addEventListener(`input`, event=>filteredProducts(event.allProducts))
 });
 
 
