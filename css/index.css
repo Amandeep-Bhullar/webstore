@@ -366,14 +366,19 @@ body{
 .div-blocks{
     min-width: 90%;
     max-width: 95%;
-    min-height: 12em;
-    max-height: 18em;
+    min-height: 22em;
+    max-height: auto;
 }
 .div-blocks img{
     min-width: 90%;
     max-width: 100%;
-    min-height: 50%;
-    max-height: 18em;
+    min-height: 22em;
+    max-height: auto;
+}
+.quick-find{
+    min-width: 90%;
+    max-width: 100%;
+    min-height: 22em;
 }
 .ulColors{
     margin-left: 4em;
