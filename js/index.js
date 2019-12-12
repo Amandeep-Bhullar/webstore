@@ -1,12 +1,13 @@
 
 let btnSeeMore=document.getElementById("btnSeeMore");
+
 let cartCounter=0;
 
 const allProducts = [
   {
     productId:1,
     productName: `Slim Fit Light Blue Suit Blazer`,
-    productColor: `Blue`,
+    productColor: ['Blue','White','Red'],
     productSize: `Small`,
     productDescription:'Slim Fit Light Blue Suit Blazer',
     productType:1,
@@ -20,7 +21,7 @@ const allProducts = [
   {
     productId:2,
     productName: `Kenneth Cole New York Fencer Melton Coat`,
-    productColor: `Green`,
+    productColor: [`Green`],
     productSize: `Medium`,
     productDescription:'Kenneth Cole New York Fencer Melton Wool Maxi Coat',
     productType:1,
@@ -34,7 +35,7 @@ const allProducts = [
   {
     productId:3,
     productName: `Trixxi Long Sleeve Smocked Dress`,
-    productColor: `Black`,
+    productColor: [`Black`],
     productSize: `Small`,
     productDescription:'Trixxi Long Sleeve Smocked Dress (Big Girls)',
     productType:1,
@@ -48,7 +49,7 @@ const allProducts = [
   {
     productId:4,
     productName: `Slim Fit Yellow Suit Blazer`,
-    productColor: `Yellow`,
+    productColor: [`Yellow`],
     productSize: `Large`,
     productDescription:'Slim Fit Yellow Suit Blazer',
     productType:1,
@@ -62,7 +63,7 @@ const allProducts = [
   {
     productId:5,
     productName: `Slim Fit Blazer With Contrast Lapel`,
-    productColor: `Blue`,
+    productColor: ['Blue'],
     productSize: `Medium`,
     productDescription:'Slim Fit Blue Suit Blazer With Contrast Lapel',
     productType:1,
@@ -77,7 +78,7 @@ const allProducts = [
   {
     productId:6,
     productName: `Women Elegant Two Button Business Suit`,
-    productColor: `Red`,
+    productColor: [`Red`],
     productSize: `Large`,
     productDescription:'Women Elegant Two Button Business Suits Tops Outwear ',
     productType:1,
@@ -92,7 +93,7 @@ const allProducts = [
   {
     productId:7,
     productName: `Slouchy Soft Brushed Casual Basic`,
-    productColor: `Yellow`,
+    productColor: [`Yellow`],
     productSize: `Medium`,
     productDescription:'Slouchy Soft Brushed Casual Basic',
     productType:2,
@@ -106,7 +107,7 @@ const allProducts = [
   {
     productId:8,
     productName: `Casual Round Neck Loose Fit Short Sleeve`,
-    productColor: `Black`,
+    productColor: [`Black`],
     productSize: `Medium`,
     productDescription:'Casual Round Neck Loose Fit Short Sleeve T-Shirt Blouse Tops',
     productType:2,
@@ -120,7 +121,7 @@ const allProducts = [
   {
     productId:9,
     productName: `Mens Dress Shirts Regular Fit Long Sleeve`,
-    productColor: `Red`,
+    productColor: [`Red`],
     productSize: `Medium`,
     productDescription:' Mens Dress Shirts Regular Fit Long Sleeve Men Shirt',
     productType:1,
@@ -134,7 +135,7 @@ const allProducts = [
   {
     productId:10,
     productName: `Office Workwear Sheath Dress`,
-    productColor: `Blue`,
+    productColor: ['Blue'],
     productSize: `Large`,
     productDescription:'Office Workwear Sheath Dress',
     productType:1,
@@ -148,7 +149,7 @@ const allProducts = [
   {
     productId:11,
     productName: `Neck Floor-Length Lace Chiffon `,
-    productColor: `Black`,
+    productColor: [`Black`],
     productSize: `Large`,
     productDescription:'Neck Floor-Length Lace Chiffon ',
     productType:1,
@@ -162,7 +163,7 @@ const allProducts = [
   {
     productId:12,
     productName: `Short Sleeve Tie Front Knot Loose Fit `,
-    productColor: `Black`,
+    productColor: [`Black`],
     productSize: `Small`,
     productDescription:'Short Sleeve Tie Front Knot Loose Fit ',
     productType:2,
@@ -176,7 +177,7 @@ const allProducts = [
   {
     productId:13,
     productName: `Suits Slim Fit Formal Dress Clothes`,
-    productColor: `Blue`,
+    productColor: ['Blue'],
     productSize: `Medium`,
     productDescription:'Suits Slim Fit Formal Dress Clothes',
     productType:1,
@@ -190,7 +191,7 @@ const allProducts = [
   {
     productId:14,
     productName: `Long Sleeve Round Neck Dress`,
-    productColor: `w`,
+    productColor: [[`White`]],
     productSize: `L`,
     productDescription:'Long Sleeve Round Neck Dress',
     productType:2,
@@ -204,7 +205,7 @@ const allProducts = [
   {
     productId:15,
     productName: `Lace Glitter Vintage Pageant Prom Dress`,
-    productColor: `Black`,
+    productColor: [`Black`],
     productSize: `Large`,
     productDescription:'Tulle Lace Glitter Vintage Pageant Prom Dress',
     productType:1,
@@ -218,7 +219,7 @@ const allProducts = [
   {
     productId:16,
     productName: `Casual Round Neck Loose Fit Short Sleeve`,
-    productColor: `Black`,
+    productColor: [`Black`],
     productSize: `Small`,
     productDescription:'Casual Round Neck Loose Fit Short Sleeve',
     productType:1,
@@ -232,7 +233,7 @@ const allProducts = [
   {
     productId:17,
     productName: `Adult Long Sleeve Tee`,
-    productColor: `White`,
+    productColor: [`White`],
     productSize: `Large`,
     productDescription:'Adult Long Sleeve Tee',
     productType:2,
@@ -246,7 +247,7 @@ const allProducts = [
   {
     productId:18,
     productName: `Women 2 Piece Sport Outfits Long Sleeve`,
-    productColor: `Yellow`,
+    productColor: [`Yellow`],
     productSize: `Small`,
     productDescription:'Women 2 Piece Sport Outfits Long Sleeve',
     productType:2,
@@ -260,7 +261,7 @@ const allProducts = [
   {
     productId:19,
     productName: `Girls logo denim short playsuit`,
-    productColor: `Blue`,
+    productColor: ['Blue'],
     productSize: `Small`,
     productDescription:'Girls logo denim short playsuit',
     productType:1,
@@ -274,7 +275,7 @@ const allProducts = [
   {
     productId:20,
     productName: `lassic,body-defining slim fit suit`,
-    productColor: `blue`,
+    productColor: ['Blue'],
     productSize: `Large`,
     productDescription:'lassic,body-defining slim fit suit',
     productType:1,
@@ -288,7 +289,7 @@ const allProducts = [
   {
     productId:21,
     productName: `Winter Sherpa Denim Jacket Windbreaker`,
-    productColor: `Blue`,
+    productColor: ['Blue'],
     productSize: `Large`,
     productDescription:'Winter Sherpa Denim Jacket Windbreaker',
     productType:2,
@@ -302,7 +303,7 @@ const allProducts = [
   {
     productId:22,
     productName: `Office Workwear Sheath Dress`,
-    productColor: `Blue`,
+    productColor: ['Blue'],
     productSize: `Large`,
     productDescription:'Office Workwear Sheath Dress',
     productType:1,
@@ -316,7 +317,7 @@ const allProducts = [
   {
   productId:23,
   productName: `Wool Blend Blue Multi Plaid Belted Coat `,
-  productColor: `Black`,
+  productColor: [`Black`],
   productSize: `Small`,
   productDescription:'Wool Blend Blue Multi Plaid Belted Coat',
   productType:1,
@@ -330,7 +331,7 @@ const allProducts = [
 {
   productId:24,
   productName: `Slim Fit Light Blue Suit Blazer`,
-  productColor: `Blue`,
+  productColor: ['Blue'],
   productSize: `Small`,
   productDescription:'Slim Fit Light Blue Suit Blazer',
   productType:2,
@@ -369,7 +370,11 @@ function getProductListsAsHTML(singleProduct)
     price = `<h4 class='productPrice'><del> CAD $  ${singleProduct.productActualPrice}</del> </h4> 
     <h4 class='blink'> Sale CAD $ ${singleProduct.productDiscountedPrice}</h4>`
   }
-
+  
+  let radios='';
+for (const color of singleProduct.productColor) {
+  radios+=`<input style="margin-left:10px;" type="radio" name="${singleProduct.productId}color" id="${singleProduct.productId}"> ${color}`
+}
 
 
 let productList = `
@@ -384,7 +389,10 @@ let productList = `
 
     <div id='productDetails${singleProduct.productId}' class='product-details'>
     <h4>Description:${singleProduct.productDescription} </h4>
-    <h4>Color : ${singleProduct.productColor}</h4>
+    <h4>Color : ${
+      radios
+    }
+      </h4>
     <h4>Size : ${singleProduct.productSize} </h4>
     <h4>Product Type:${singleProduct.productType}</h4> 
     <h4>Product Category:${singleProduct.productCategory}</h4> 
@@ -414,15 +422,22 @@ const submitTheFilter=event=>{//documet.getElementById('')
 function filterProducts(event, arrToFilter)
 {
   event.preventDefault();
-  // dropDownProductType
-  // dropDownProductCategory
-
   const dropDownListType = parseInt(event.target.elements.dropDownProductType.value);//filter by type
   const dropDownListCategory = parseInt(event.target.elements.dropDownProductCategory.value); //filter by category
+  const dropDownByPrice = parseInt(event.target.elements.dropDownSortByPrice.value); //filter by category
   
-
   // Copy the incoming Array (just in case)
-  let arrToShow = arrToFilter.slice();
+  let arrToShow = allProducts.slice();
+
+  if (dropDownByPrice) {
+    if(dropDownByPrice==1) // Lowest To Highest
+    {
+    arrToShow = arrToShow.sort((x, y) => (x.productDiscountedPrice < y.productDiscountedPrice ? -1 : 1));}
+    else
+    {
+      arrToShow = arrToShow.sort((x, y) => (x.productDiscountedPrice < y.productDiscountedPrice ? 1 : -1));}
+    }
+
 
   if (dropDownListType) {
     // Filter by dropDownListType
@@ -433,7 +448,6 @@ function filterProducts(event, arrToFilter)
     console.log(dropDownListCategory);
     arrToShow = arrToShow.filter(prod => +prod.productCategory == +dropDownListCategory);
   }
-
   showSomeProducts(arrToShow);
 }
 
@@ -517,6 +531,8 @@ window.addEventListener('load', () => {
   const formSearchProducts = document.getElementById("formQuickFind");
   formSearchProducts.addEventListener("submit", event => filterProducts(event, allProducts));
   
+  document.getElementById("dropDownSortByPrice").addEventListener('change', event => console.log('Change'))
+  formSearchProducts.addEventListener("submit", event => filterProducts(event, allProducts));
 
   document.getElementById("textBoxSearch").addEventListener('change', event => console.log('Change'))
   const formSearchTextBox = document.getElementById("formMainSearch");
