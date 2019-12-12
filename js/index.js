@@ -1,8 +1,6 @@
 
 let btnSeeMore=document.getElementById("btnSeeMore");
-
 let cartCounter=0;
-
 const allProducts = [
   {
     productId:1,
@@ -356,7 +354,7 @@ function toggleShowMoreDetails(productId)
   }
 }
 
-
+//Getting single product information
 function getProductListsAsHTML(singleProduct)
 {
 
@@ -409,7 +407,6 @@ function addProductsToCart(){
   document.getElementById("lblProductCart").innerHTML=cartCounter;
 }
 
-//1 function,2 parameters,3return,4description(describe these things on th function or inside the function)
 
 //submitTheFilter is for the filtering by the submit button with id of filterForm
 
@@ -424,21 +421,22 @@ function filterProducts(event, arrToFilter)
   event.preventDefault();
   const dropDownListType = parseInt(event.target.elements.dropDownProductType.value);//filter by type
   const dropDownListCategory = parseInt(event.target.elements.dropDownProductCategory.value); //filter by category
-  const dropDownByPrice = parseInt(event.target.elements.dropDownSortByPrice.value); //filter by category
-
+  const dropDownByPrice = parseInt(event.target.elements.dropDownSortByPrice.value); //sort by Price
+  const dropDownSortName = parseInt(event.target.elements.dropDownSortByName.value); //sort by ASC DSC order
   
-  // Sort the array by price,copy the Array and put its value to a variable
-  let arrToShow = allProducts.slice();
+  // Copy the incoming Array (just in case)
+  let arrToShow = arrToFilter.slice();
 
-  if (dropDownByPrice) {
+  if (dropDownByPrice) 
+  {
     if(dropDownByPrice==1) // Lowest To Highest
     {
     arrToShow = arrToShow.sort((x, y) => (x.productDiscountedPrice < y.productDiscountedPrice ? -1 : 1));}
     else
     {
-      arrToShow = arrToShow.sort((x, y) => (x.productDiscountedPrice < y.productDiscountedPrice ? 1 : -1));}
+      arrToShow = arrToShow.sort((x, y) => (x.productDiscountedPrice < y.productDiscountedPrice ? 1 : -1));
     }
-
+    }
 
   if (dropDownListType) {
     // Filter by dropDownListType
@@ -452,6 +450,7 @@ function filterProducts(event, arrToFilter)
   showSomeProducts(arrToShow);
 }
 
+//filter the products according to product type in mobile version
 // Filter product by dropdown list of quick find for Mobile
 function filterProductsM(event, arrToFilter)
 {
@@ -523,18 +522,26 @@ function showSomeProducts(arr)
   
 //........execution.........
 window.addEventListener('load', () => {
-
+//filter the products according to product type in mobile version
   document.getElementById("dropDownProductTypeM").addEventListener('change', event => console.log('Change'))
   const formSearchProductsM = document.getElementById("formQuickFindM");
   formSearchProductsM.addEventListener("submit", event => filterProductsM(event, allProducts));
 
+//filter the products according to product type
   document.getElementById("dropDownProductType").addEventListener('change', event => console.log('Change'))
   const formSearchProducts = document.getElementById("formQuickFind");
   formSearchProducts.addEventListener("submit", event => filterProducts(event, allProducts));
   
+  //sort the products according to product price
   document.getElementById("dropDownSortByPrice").addEventListener('change', event => console.log('Change'))
   formSearchProducts.addEventListener("submit", event => filterProducts(event, allProducts));
 
+  // sort by name is not working
+  //document.getElementById("dropDownSortByName").addEventListener('change', event => console.log('Change'))
+  //formSearchProducts.addEventListener("submit", event => filterProducts(event, allProducts));
+
+
+  //search the products according to the name of product
   document.getElementById("textBoxSearch").addEventListener('change', event => console.log('Change'))
   const formSearchTextBox = document.getElementById("formMainSearch");
   formSearchTextBox.addEventListener("submit", event => filterProductsBySearchBox(event, allProducts));
