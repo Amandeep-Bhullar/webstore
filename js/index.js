@@ -425,8 +425,9 @@ function filterProducts(event, arrToFilter)
   const dropDownListType = parseInt(event.target.elements.dropDownProductType.value);//filter by type
   const dropDownListCategory = parseInt(event.target.elements.dropDownProductCategory.value); //filter by category
   const dropDownByPrice = parseInt(event.target.elements.dropDownSortByPrice.value); //filter by category
+
   
-  // Copy the incoming Array (just in case)
+  // Sort the array by price,copy the Array and put its value to a variable
   let arrToShow = allProducts.slice();
 
   if (dropDownByPrice) {
