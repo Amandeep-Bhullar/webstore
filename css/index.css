@@ -334,6 +334,14 @@ margin: 1em;
 .hide-in-mobile{
    display: block;
 }
+
+.div-blocks{
+    max-height: 16em;
+}
+.div-blocks img{max-height: 16em;}
+.ulColors{
+    margin-left: 4em;
+}
 .grid-subscribe{padding-top: 0.5em;
 margin: 0.5em;
 margin-left: 1em;
@@ -359,17 +367,21 @@ body{
     min-width: 90%;
     max-width: 95%;
     min-height: 12em;
-    max-height: 14em;
+    max-height: 18em;
 }
 .div-blocks img{
     min-width: 90%;
     max-width: 100%;
     min-height: 50%;
+    max-height: 18em;
+}
+.ulColors{
+    margin-left: 4em;
 }
 
 .grid-find-advertise{
 display: grid;
-grid-template-columns: 33% 67%;
+grid-template-columns: 34.2% 65.8%;
 }
 .topbar{
     display: grid;
@@ -425,7 +437,6 @@ display: block;
     width:100%;
 }
 .mainFooter{
-
     grid-column-gap: 40%;
     justify-self: end;
     justify-content: space-evenly;
@@ -439,13 +450,12 @@ display: block;
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
     animation-duration: 4s;
-  }
-  @keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
-  }
-
-  span.stars, span.stars span {
+}
+@keyframes example {
+from {background-color: red;}
+to {background-color: yellow;}
+}
+span.stars, span.stars span {
     display: block;
     background: url(stars.png) 0 -16px repeat-x;
     width: 80px;
