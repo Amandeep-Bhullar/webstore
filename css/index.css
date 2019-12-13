@@ -359,26 +359,20 @@ body{
     min-width: 90%;
     max-width: 95%;
     min-height: 22em;
-<<<<<<< HEAD
     max-height: 30em;
-=======
     max-height: auto;
->>>>>>> c4c8dbf5f28f67e7a3aeaad5ea3a442a686ad37f
 }
 .div-blocks img{
     min-width: 90%;
     max-width: 100%;
     min-height: 22em;
-<<<<<<< HEAD
     max-height: 30em;
-=======
     max-height: auto;
 }
 .quick-find{
     min-width: 90%;
     max-width: 100%;
     min-height: 22em;
->>>>>>> c4c8dbf5f28f67e7a3aeaad5ea3a442a686ad37f
 }
 .ulColors{
     margin-left: 4em;
