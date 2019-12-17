@@ -1,36 +1,33 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhullar Webstore</title>
-    <meta name="description" content="[A short description]">
-    <meta name="author" content="[Your Name]">
-    <link rel="stylesheet" href="css/reset.css?v=1.0"> <!-- You may change this "Reset" to "Normalize" if preferred -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
+    <meta name="description" content="Go for online shopping at Bhullar Webstore">
+    <meta name="author" content="Amandeep Bhullar">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/index.css?v=1.0">
     <link rel="stylesheet" href="css/reset.css?v=2.0">
-
     <link rel="stylesheet" href="css/reset.css?v=3.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
-    <!-- Note: From this point oneward, this document should be considered 100% customizable. The elements and structure below are simply an example template to get you started. Your products and application will have different criteria that will give you the opportunity to customize all aspects of this document to your needs. Use what you need, discard or modify anything that's not directly useful in reaching your end goal. -->
-
     <div class="top-main-bar">
       <!-- Site logo, replace with your own -->
       <div class="ws-logo-pic">
-      <a href="index.html"><img src="img/logo-of-webstore.png" alt="HTML Logo (replace this)"></a>
+        <a href="index.html"><img src="img/logo-of-webstore.png" alt="HTML Logo (replace this)"></a>
       </div>
       <div class="icon-n-bar">
-          <div class="hide-in-mobile srch-icon">
-              <i class="fas fa-search-location" ></i> 
-          </div>     
-          <div class="hide-in-mobile srch-bar">
-            <form id="formMainSearch">
-              <input type="text" id="textBoxSearch" placeholder="  Search Products" name="textBoxSearch">
-            </form>
-          </div>  
+        <div class="hide-in-mobile srch-icon">
+          <i class="fas fa-search-location"></i>
+        </div>
+        <div class="hide-in-mobile srch-bar">
+          <form id="formMainSearch">
+            <input type="text" id="textBoxSearch" placeholder="  Search Products" name="textBoxSearch">
+          </form>
+        </div>
       </div>
       <div>
         <ul class="ulTopMenu">
@@ -39,56 +36,59 @@
           <li class="button liIconMenu"><i class="fas fa-sign-in-alt"></i></li>
           <li class="button"><i class="fas fa-shopping-cart"> <label id="lblProductCart"></label></i></li>
           <li class="button liIconMenu hideMenu"><button class="btn btn-primary"><i class="fas fa-bars"></i></button></li>
-      </ul>
+        </ul>
+      </div>
     </div>
-   </div>
 
-<header>
-      <!-- Navigation menu and toggle button (example) -->
+    <header>
+      <!-- Navigation, menubar and toggle button used for mobile screen -->
       <nav aria-label="Primary" class="main-navbar">
         <ul class="topbar">
           <li><a href="index.html" class="button">Men</a>
-          <li><a href="index.html"class="button">Women</a></li>
-          <li><a href="index.html"class="button">Baby & Kids</a></li>
-          <li><a href="index.html"class="button">Sale</a></li>
+          <li><a href="index.html" class="button">Women</a></li>
+          <li><a href="index.html" class="button">Baby & Kids</a></li>
+          <li><a href="index.html" class="button">Sale</a></li>
         </ul>
       </nav>
-</header>
+    </header>
     <main>
-<!-- <h2>Search Results in Quick search box</h2> -->
-<article class="grid-find-advertise">
-      <section  class="quick-find big-box-border">
+      <!-- Search Results in Quick search box-->
+      <article class="grid-find-advertise">
+        <section class="quick-find big-box-border">
           <form id="formQuickFindM" class="quick-search-grid">
             <article class="search-in-mobile">
-                <select class="dropdownProduct" id="dropDownProductTypeM" name="dropDownProductTypeM">
+              <select class="dropdownProduct" id="dropDownProductTypeM" name="dropDownProductTypeM">
+                <option value="0">Select Product Type</option>
+                <option name="formal" value="1">Formal</option>
+                <option value="2">Casual</option>
+              </select>
+              <select class="dropdownProduct" id="dropDownProductCategoryM" name="dropDownProductCategoryM">
+                <option value="0">Select Category</option>
+                <option value="1">Men</option>
+                <option value="2">Women</option>
+                <option value="3">Baby & Kids</option>
+              </select>
+              <div class="search-button-container">
+                <button type="submit" id="buttonSearchM" class="button"><i class="fas fa-search-location"></i>
+                </button>
+              </div>
+            </article>
+          </form>
+          <form id="formQuickFind" class="quick-search-grid">
+            <div class="hide-in-mobile">
+              <article class="hide-in-mobile topbar-of-quickfind">
+                <h3>
+                  Quick Find Your Product
+                </h3>
+              </article>
+              <article class="main-navbar type">
+                <h4 class="hide-in-mobile">Product Type</h4>
+                <label class="hide-in-mobile"></label>
+                <select class="dropdownProduct" id="dropDownProductType" name="dropDownProductType">
                   <option value="0">Select Product Type</option>
                   <option name="formal" value="1">Formal</option>
                   <option value="2">Casual</option>
                 </select>
-                <select class="dropdownProduct" id="dropDownProductCategoryM" name="dropDownProductCategoryM">
-                    <option value="0">Select Category</option>
-                    <option value="1">Men</option>
-                    <option value="2">Women</option>
-                    <option value="3">Baby & Kids</option>
-                  </select>
-                  <div class="search-button-container"><button type="submit" id="buttonSearchM" class="button"><i class="fas fa-search-location" ></i> </button></div>
-            </article>
-          </form>
-            <form id="formQuickFind" class="quick-search-grid">
-            <div class="hide-in-mobile">
-              <article class="hide-in-mobile topbar-of-quickfind">
-                  <h3 >
-                      Quick Find Your Product
-                  </h3>
-                </article>
-              <article class="main-navbar type">
-                  <h4 class="hide-in-mobile">Product Type</h4>
-                  <label class="hide-in-mobile"></label>
-                  <select class="dropdownProduct" id="dropDownProductType" name="dropDownProductType">
-                    <option value="0">Select Product Type</option>
-                    <option name="formal" value="1">Formal</option>
-                    <option value="2">Casual</option>
-                  </select>
               </article>
               <article class="category">
                 <h4 class="hide-in-mobile">Product Category</h4>
@@ -102,13 +102,13 @@
               </article>
 
               <article class="category">
-                  <h4 class="hide-in-mobile">Product Name Sorting</h4>
-                  <label class="hide-in-mobile"></label>
-                  <select class="dropdownProduct" id="dropDownSortByName" name="dropDownSortByName">
-                    <option value="0">Sort Products Alphabeticaly</option>
-                    <option name="formal" value="1">Sort A-Z</option>
-                    <option value="2">Sort Z-A</option>
-                  </select>
+                <h4 class="hide-in-mobile">Product Name Sorting</h4>
+                <label class="hide-in-mobile"></label>
+                <select class="dropdownProduct" id="dropDownSortByName" name="dropDownSortByName">
+                  <option value="0">Sort Products Alphabeticaly</option>
+                  <option name="formal" value="1">Sort A-Z</option>
+                  <option value="2">Sort Z-A</option>
+                </select>
               </article>
               <article class="category">
                 <h4 class="hide-in-mobile">Product Price Sorting</h4>
@@ -119,32 +119,28 @@
                   <option value="2">Highest To Lowest</option>
                 </select>
               </article>
-
               <article class="search">
                 <div><button type="submit" id="buttonSearch" class="button">Search</button></div>
               </article>
             </div>
           </form>
         </section>
-         <!--70% off-->
-         <section class="grid-addvertisement">
-         <div class="hide-in-mobile images imgcover div-blocks sale-box-border">
+        <!--70% off banner-->
+        <section class="grid-addvertisement">
+          <div class="hide-in-mobile images imgcover div-blocks sale-box-border">
             <img src="img/sale-70-banner.gif">
-           <!-- <h2>70% Off ON These Products</h2> -->
-         </div>
-        <div class="hide-in-mobile images imgcover div-blocks sale-box-border">
-          <img src="img/clearance-sale.png">
-         <!-- <h2>clearance> -->
-         </div>
+           <!--clearance> -->
+          </div>
+          <div class="hide-in-mobile images imgcover div-blocks sale-box-border">
+            <img src="img/clearance-sale.png">
+          </div>
         </section>
       </article>
-        <!-- Note: All 5 products are identical -->
-
-        <div  class="all-products" id="products">
-        </div>
-
+      <!--We will create an array  in javascript and then will use id="products"-->
+      <div class="all-products" id="products">
+      </div>
       <section>
-        <nav aria-label="Product Pages" >
+        <nav aria-label="Product Pages">
           <ul class="paging">
             <li><a href="#" aria-label="Previous page">Prev</a></li>
             <li><a class="activPage" href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
@@ -156,51 +152,53 @@
         </nav>
       </section>
     </main>
- <!--Subscribe-->
- <div class="grid-subscribe">
-    <ul>
-    <li><i class="far fa-envelope"></i></li>
-    <li><h1>Stay Up To Date</h1></li>
-    <li><input class="txtSubscribe" type="text" placeholder="Your Email Address"></li>
-    <li><button class="button">Subscribe</button></li>
-  </ul>
-</div>
+    <!--Subscribe-->
+    <div class="grid-subscribe">
+      <ul>
+        <li><i class="far fa-envelope"></i></li>
+        <li>
+          <h1>Stay Up To Date</h1>
+        </li>
+        <li><input class="txtSubscribe" type="text" placeholder="Your Email Address"></li>
+        <li><button class="button">Subscribe</button></li>
+      </ul>
+    </div>
     <footer>
       <nav aria-label="Legal">
         <ul class="mainFooter">
           <li><a href="#">CUSTOMER SERVICE</a>
             <ul>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Track Order</a></li>
-                <li><a href="#">Returns</a></li>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Coupons</a></li>
-                <li><a href="#">Store Locator</a></li>
-                <li><a href="#">Accessibility</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Coupons</a></li>
+              <li><a href="#">Store Locator</a></li>
+              <li><a href="#">Accessibility</a></li>
             </ul>
           </li>
           <li><a href="#">EXPLORE</a>
             <ul>
-                <li><a href="#">Bhullar Webstore</a></li>
+              <li><a href="#">Bhullar Webstore</a></li>
             </ul>
           </li>
           <li><a href="#">ABOUT</a>
             <ul>
-                <li><a href="#">Bhullar Webstore</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Privacy</a></li>
+              <li><a href="#">Bhullar Webstore</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy</a></li>
             </ul>
           </li>
           <li><a href="#">CONTACT US</a>
             <ul>
-                <li><a href="#">Email Us</a></li>
-                <li><a href="#">Call us: 1.800.222.1111</a></li>
+              <li><a href="#">Email Us</a></li>
+              <li><a href="#">Call us: 1.800.222.1111</a></li>
             </ul>
           </li>
           <li><a href="#">OUR GLOBAL WEBSITES</a>
             <ul>
-                <li><a href="#"> <select>
-                  <option value="0">Canada</option>
+              <li><a href="#"> <select>
+                    <option value="0">Canada</option>
                     <option value="1">America</option>
                     <option value="2">India</option>
                     <option value="3">United Kingdom</option>
@@ -208,21 +206,19 @@
             </ul>
           </li>
           <li>
-              <ul class="sociallinks">
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                </ul>
+            <ul class="sociallinks">
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
           </li>
         </ul>
       </nav>
       <p class="copyright">Copyright <i class="far fa-copyright"></i> 2019 Bhullar Webstore</p>
     </footer>
-
-    <!-- [Remove all default comments in this document after reading] -->
-
     <script src="js/index.js"></script>
-  </body>
-</html> 
+</body>
+
+</html>
