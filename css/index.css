@@ -368,6 +368,7 @@ del{
         min-width: 90%;
         max-width: 100%;
         min-height: 22em;
+        max-height: 30em;
         max-height: auto;
     }
     .quick-find{
