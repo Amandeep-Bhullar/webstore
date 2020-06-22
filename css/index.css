@@ -40,9 +40,9 @@ body{
 a {
     color:var(--darkgrey) ;
 }
-.main-navbar{
+/* .main-navbar{
     display: none;
-}
+} */
 .topbar{
     border-bottom: var(--semilight);
     text-align:left;
